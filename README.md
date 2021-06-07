@@ -1,10 +1,6 @@
-# Cookiecutter Data Science
+# Cookiecutter Danfoss
 
-_A logical, reasonably standardized, but flexible project structure for doing and sharing data science work._
-
-
-#### [Project homepage](http://drivendata.github.io/cookiecutter-data-science/)
-
+_Sourced from: [Cookiecutter for data Science](http://drivendata.github.io/cookiecutter-data-science/)_
 
 ### Requirements to use the cookiecutter template:
 -----------
@@ -26,19 +22,10 @@ $ conda install cookiecutter
 ### To start a new project, run:
 ------------
 
-    cookiecutter -c v1 https://github.com/drivendata/cookiecutter-data-science
+    cookiecutter -c v1 https://github.com/Smrkc/cookiecutter-data-science
 
 
 [![asciicast](https://asciinema.org/a/244658.svg)](https://asciinema.org/a/244658)
-
-### New version of Cookiecutter Data Science
-------------
-Cookiecutter data science is moving to v2 soon, which will entail using
-the command `ccds ...` rather than `cookiecutter ...`. The cookiecutter command
-will continue to work, and this version of the template will still be available.
-To use the legacy template, you will need to explicitly use `-c v1` to select it.
-Please update any scripts/automation you have to append the `-c v1` option (as above),
-which is available now.
 
 
 ### The resulting directory structure
@@ -48,7 +35,6 @@ The directory structure of your new project looks like this:
 
 ```
 ├── LICENSE
-├── Makefile           <- Makefile with commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
 ├── data
 │   ├── external       <- Data from third party sources.
@@ -77,30 +63,27 @@ The directory structure of your new project looks like this:
 │   ├── __init__.py    <- Makes src a Python module
 │   │
 │   ├── data           <- Scripts to download or generate data
-│   │   └── make_dataset.py
 │   │
 │   ├── features       <- Scripts to turn raw data into features for modeling
-│   │   └── build_features.py
 │   │
 │   ├── models         <- Scripts to train models and then use trained models to make
-│   │   │                 predictions
-│   │   ├── predict_model.py
-│   │   └── train_model.py
+│   │                     predictions
 │   │
-│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
-│       └── visualize.py
-│
+│   │── visualization  <- Scripts to create exploratory and results oriented visualizations
+│   │
+│   └── utils          <- Helper functions
+│   
 └── tox.ini            <- tox file with settings for running tox; see tox.readthedocs.io
 ```
-
-## Contributing
-
-We welcome contributions! [See the docs for guidelines](https://drivendata.github.io/cookiecutter-data-science/#contributing).
 
 ### Installing development requirements
 ------------
 
     pip install -r requirements.txt
+
+OR
+
+    conda install --file requirements.txt
 
 ### Running the tests
 ------------
